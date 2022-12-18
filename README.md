@@ -7,5 +7,6 @@ I used https://github.com/rodrigo-rac2/Hello-World-Selenium as a base, and took 
 1) Open project in intellij
 2) Use maven's package command- You shouldn't need to do anything, it should pull everything from the .pom file
 3) in the project's "target" folder, there should now be a helloworld-selenium-0-jar-with-dependencies.jar file. Run it or schedule it.
+4) download chromedriver and place it in the src directory
 
 0) You will need to update hardcoded paths in your filesystem to the project directory for it to work but unless you're in the group chat on twitter its useless for you anyway right? This program is not for you! So step zero would actually be to just rip out everything you don't need for your own usage. Hopefully this is a useful example for a little toy utility like this though.

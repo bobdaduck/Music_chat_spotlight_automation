@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>duck</groupId>
-  <artifactId>helloworld-selenium</artifactId>
+  <artifactId>RunMusicChat-selenium</artifactId>
   <version>0</version>
   <packaging>jar</packaging>
 <dependencies>
@@ -9,16 +9,16 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.1.2</version>
+    <version>4.6.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.5</version>
+    <version>7.6.1</version>
     <scope>test</scope>
 </dependency>
-    <dependency><groupId>io.github.bonigarcia</groupId><artifactId>webdrivermanager</artifactId><version>5.2.0</version></dependency>
+    <dependency><groupId>io.github.bonigarcia</groupId><artifactId>webdrivermanager</artifactId><version>5.3.1</version></dependency>
 
 </dependencies>
   <build>
@@ -44,7 +44,7 @@
                         <archive>
                             <manifest>
                                 <mainClass>
-                                    HelloWorldSelenium
+                                    RunMusicChat
                                 </mainClass>
                             </manifest>
                         </archive>
