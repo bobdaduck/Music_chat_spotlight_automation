@@ -1,5 +1,5 @@
 # Music_chat_spotlight_automation
-Simple selenium program in Java to tell everyone in the twitter music chat who's up next. Reads CSV, writes .txt, then posts to twitter. I output this as an executable .jar and run it with window's built in task scheduler to consistently let us know who should be sharing a song each day.
+Simple selenium program in Java to tell everyone in the twitter music chat who's up next. Reads CSV, writes .txt, then posts to twitter. I output this as an executable .jar and run it with window's built in task scheduler to consistently let us know who should be sharing a song each day. Normally you wouldn't use Java for this sort of thing but I was trying to learn Java at the time so I made it work.
 
 I used https://github.com/rodrigo-rac2/Hello-World-Selenium as a base, and took several shortcuts by hardcoding paths and URLs, because this program only needs to do one thing. However, I plan on updating it to be generalizable eventually.
 
