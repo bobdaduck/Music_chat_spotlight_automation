@@ -43,12 +43,14 @@ public class RunMusicChat {
 		}
 		System.out.println(next_spotlight);
 
+		WebDriverManager.chromedriver().setup();
 		//execute:
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bobdaduck\\Desktop\\Hello-World-Selenium-master\\src\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\bobdaduck\\Desktop\\Hello-World-Selenium-master\\src\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("user-data-dir=C:/Users/bobdaduck/AppData/Local/Google/Chrome/User Data/Default"); //Neat trick, use system cookies so selenium doesn't have to login
 		options.addArguments("start-maximized"); // open Browser in maximized mode
 		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--disable-extensions"); // disabling extensions
 		options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 		WebDriver driver = new ChromeDriver(options);
@@ -67,9 +69,7 @@ public class RunMusicChat {
 		List<WebElement> conversations = driver.findElements(By.cssSelector("[data-testid='conversation']"));
 		System.out.println(conversations.toString());
 		for (WebElement conversation : conversations) {
-			System.out.println("checking conversation");
 			String conversation_title = conversation.getText();
-			System.out.println(conversation_title);
 			if (conversation.findElement(By.cssSelector("[data-testid='DMGroupConversationTitle']")).getText().contains("Duckstack Music | Spotlight Channel")){
 				desired_conversation = conversation;
 				desired_conversation.click();
@@ -92,5 +92,7 @@ public class RunMusicChat {
 			e.printStackTrace();
 			driver.quit();
 		}
+
+
 	}
 }
