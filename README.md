@@ -1,12 +1,16 @@
 # Music_chat_spotlight_automation
-Simple selenium program in Java to tell everyone in the twitter music chat who's up next. Reads CSV, writes .txt, then posts to twitter. I output this as an executable .jar and run it with window's built in task scheduler to consistently let us know who should be sharing a song each day. Normally you wouldn't use Java for this sort of thing but I was trying to learn Java at the time so I made it work.
+Simple selenium program in Java to tell everyone in the X.com music chat who's up next. Reads CSV, writes .txt, then posts to twitter. I output this as an executable .jar and run it in a task scheduler for daily consistency. 
 
-I used https://github.com/rodrigo-rac2/Hello-World-Selenium as a base, and took several shortcuts by hardcoding paths and URLs, because this program only needs to do one thing. However, I plan on updating it to be generalizable eventually.
+Normally you wouldn't use Java for this sort of thing because Java is not really meant for bundling into executable scripts, but it was an interesting exercise. There is also an identical python script to demonstrate how the project works in that language.
 
-**SETUP**
+I used https://github.com/rodrigo-rac2/Hello-World-Selenium as a base, started with some hard coded paths because the script only needed to do one thing, then expanded it to be generalizable. Demonstrates how to use webdriverManager to avoid needing to put chromedriver in the project directory. Demonstrates selecting group chat by matching on element text. Demonstrates chrome options using normal user cookies to avoid needing to sign in. Demonstrates reading and writing from files in order to avoid spotlight repetition.
+
+**JAVA SETUP**
+0) Add project directory to PATH for convenience
 1) Open project in intellij
 2) Use maven's package command- You shouldn't need to do anything, it should pull everything from the .pom file
-3) in the project's "target" folder, there should now be a helloworld-selenium-0-jar-with-dependencies.jar file. Run it or schedule it.
-4) download chromedriver and place it in the src directory
+3) in the project's "target" folder, there should now be a Run_music_chat-selenium-0-jar-with-dependencies.jar file.
 
-0) You will need to update hardcoded paths in your filesystem to the project directory for it to work but unless you're in the group chat on twitter its useless for you anyway right? This program is not for you! So step zero would actually be to just rip out everything you don't need for your own usage. Hopefully this is a useful example for a little toy utility like this though.
+**PYTHON SETUP**
+0) Pip install selenium, pip install webdriver_manager
+1) run the python file from command line.
